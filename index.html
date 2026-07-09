@@ -20,7 +20,7 @@
         var search = window.location.search;
         var key = '?redirect=';
         if (search.indexOf(key) === 0) {
-          var base = '/';
+          var base = '/radi-tetra-overflow/';
           var path = decodeURIComponent(search.slice(key.length));
           window.history.replaceState(null, null, base + path);
         }

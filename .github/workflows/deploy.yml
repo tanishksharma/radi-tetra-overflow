@@ -32,7 +32,9 @@ jobs:
         run: npm ci
 
       - name: Set env
-        run: echo "VITE_GPAY_UPI=${{ secrets.VITE_GPAY_UPI }}" >> $GITHUB_ENV
+        run: |
+          echo "VITE_GPAY_UPI=${{ secrets.VITE_GPAY_UPI }}" >> $GITHUB_ENV
+          echo "BASE_URL=/radi-tetra-overflow/" >> $GITHUB_ENV
 
       - name: Build
         run: npm run build
