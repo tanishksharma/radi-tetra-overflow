@@ -197,7 +197,7 @@ export default function AuthPage() {
   return (
     <div style={{ position: 'fixed', inset: 0, background: '#0a0a14', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: '"Courier New", monospace', padding: '1rem' }}>
       {/* Back button */}
-      <button onClick={() => navigate('/')} style={{ position: 'absolute', top: 16, left: 16, background: 'none', border: 'none', color: '#555', cursor: 'pointer', fontSize: '0.75rem', letterSpacing: '0.12em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 8 }}>
+      <button onClick={() => navigate('/')} style={{ position: 'absolute', top: 'calc(env(safe-area-inset-top, 0px) + 16px)', left: 'calc(env(safe-area-inset-left, 0px) + 16px)', background: 'none', border: 'none', color: '#555', cursor: 'pointer', fontSize: '0.75rem', letterSpacing: '0.12em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 8 }}>
         <img src={homeIconUrl} alt="" style={{ width: 18, height: 18, objectFit: 'contain' }} />
         <span>BACK</span>
       </button>

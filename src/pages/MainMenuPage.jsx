@@ -206,7 +206,7 @@ export default function MainMenuPage() {
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, transparent 40%, #0a0a14 100%)', pointerEvents: 'none' }} />
 
       {/* Header */}
-      <header style={{ position: 'relative', zIndex: 50, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.85rem 1.4rem', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <header style={{ position: 'relative', zIndex: 50, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'calc(env(safe-area-inset-top, 0px) + 0.85rem) 1.4rem 0.85rem', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ fontSize: '0.65rem', letterSpacing: '0.22em', color: '#444' }}>
           {typeof __APP_VERSION__ !== 'undefined' ? `v${__APP_VERSION__}` : ''}
         </div>
@@ -294,7 +294,7 @@ export default function MainMenuPage() {
       </main>
 
       {/* Footer */}
-      <footer style={{ position: 'relative', zIndex: 10, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', padding: '0.65rem', borderTop: '1px solid rgba(255,255,255,0.05)', fontSize: '0.62rem', color: '#444', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+      <footer style={{ position: 'relative', zIndex: 10, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', padding: '0.65rem 0.65rem calc(env(safe-area-inset-bottom, 0px) + 0.65rem)', borderTop: '1px solid rgba(255,255,255,0.05)', fontSize: '0.62rem', color: '#444', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
         <span>Tetra Overflow Ultra</span>
         <button
           onClick={() => navigate('/info')}
