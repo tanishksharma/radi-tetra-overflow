@@ -1233,7 +1233,7 @@ export default function MultiplayerPage() {
     <div style={{ minHeight: '100dvh', background: '#0a0a14', display: 'flex', flexDirection: 'column', fontFamily: '"Courier New", monospace', color: '#fff', overflow: 'hidden' }}>
 
       {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 1.4rem', borderBottom: '1px solid rgba(255,255,255,0.06)', flexShrink: 0, zIndex: 10, position: 'relative' }}>
+      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 'calc(env(safe-area-inset-top, 0px) + 1rem) 1.4rem 1rem', borderBottom: '1px solid rgba(255,255,255,0.06)', flexShrink: 0, zIndex: 10, position: 'relative' }}>
         <button
           onClick={screen === SCREEN.GAME ? undefined : () => (screen === SCREEN.PICK ? navigate('/') : setScreen(SCREEN.PICK))}
           style={{ background: 'none', border: 'none', color: '#666', cursor: screen === SCREEN.GAME ? 'default' : 'pointer', fontSize: '0.72rem', letterSpacing: '0.14em', fontFamily: 'inherit', padding: 0, opacity: screen === SCREEN.GAME ? 0.3 : 1, display: 'flex', alignItems: 'center', gap: 8 }}
@@ -1314,7 +1314,7 @@ export default function MultiplayerPage() {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
         {/* Friends quick access on PICK */}
         {screen === SCREEN.PICK && (
-          <div style={{ position: 'absolute', top: 10, right: 12, zIndex: 5 }}>
+          <div style={{ position: 'absolute', top: 'calc(env(safe-area-inset-top, 0px) + 10px)', right: 'calc(env(safe-area-inset-right, 0px) + 12px)', zIndex: 5 }}>
             <button
               onClick={() => setShowFriendsPanel(true)}
               style={{ position: 'relative', background: 'none', border: '1px solid rgba(255,255,255,0.12)', color: '#888', borderRadius: 6, padding: '3px 8px', cursor: 'pointer', fontSize: '0.62rem', fontFamily: 'inherit', letterSpacing: '0.1em' }}

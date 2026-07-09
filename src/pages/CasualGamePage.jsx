@@ -28,7 +28,7 @@ export default function CasualGamePage() {
         onClick={() => navigate('/')}
         title="Back to menu"
         style={{
-          position: 'fixed', top: 10, left: 10, zIndex: 9999,
+          position: 'fixed', top: 'calc(env(safe-area-inset-top, 0px) + 10px)', left: 'calc(env(safe-area-inset-left, 0px) + 10px)', zIndex: 9999,
           background: 'rgba(0,0,0,0.65)',
           backdropFilter: 'blur(6px)',
           border: '1px solid rgba(255,255,255,0.14)',

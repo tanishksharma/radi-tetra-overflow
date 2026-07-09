@@ -567,7 +567,7 @@ export default function Season3MapPage() {
         onWheel={handleWheel}
       >
         {/* Zoom controls (top-right) */}
-        <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 26, display: 'flex', gap: 6 }}>
+        <div style={{ position: 'absolute', top: 'calc(env(safe-area-inset-top, 0px) + 10px)', right: 'calc(env(safe-area-inset-right, 0px) + 10px)', zIndex: 26, display: 'flex', gap: 6 }}>
           <button
             onClick={(e) => { e.stopPropagation(); zoomOut() }}
             onTouchStart={(e) => e.stopPropagation()}
