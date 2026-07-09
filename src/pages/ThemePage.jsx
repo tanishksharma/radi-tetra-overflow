@@ -279,7 +279,7 @@ export default function ThemePage() {
         </div>
       )}
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 480, margin: '0 auto', padding: '1.5rem 1rem 4rem' }}>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: 480, margin: '0 auto', padding: 'calc(env(safe-area-inset-top, 0px) + 1.5rem) 1rem 4rem' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '1.8rem' }}>
           <button

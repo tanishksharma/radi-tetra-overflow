@@ -287,7 +287,7 @@ export default function ZodiacMapPage() {
       onClick={() => setSelected(null)}
     >
       {/* ── Header ── */}
-      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 1.4rem', borderBottom: '1px solid rgba(255,255,255,0.05)', flexShrink: 0, zIndex: 10, position: 'relative' }}>
+      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 'calc(env(safe-area-inset-top, 0px) + 1rem) 1.4rem 1rem', borderBottom: '1px solid rgba(255,255,255,0.05)', flexShrink: 0, zIndex: 10, position: 'relative' }}>
         <button
           onClick={e => { e.stopPropagation(); playBack(); navigate('/story') }}
           style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: '0.72rem', letterSpacing: '0.14em', fontFamily: 'inherit', padding: 0, display: 'flex', alignItems: 'center', gap: 8 }}
@@ -386,7 +386,7 @@ export default function ZodiacMapPage() {
             ))}
           </svg>
 
-          <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 26, display: 'flex', gap: 6 }}>
+          <div style={{ position: 'absolute', top: 'calc(env(safe-area-inset-top, 0px) + 10px)', right: 'calc(env(safe-area-inset-right, 0px) + 10px)', zIndex: 26, display: 'flex', gap: 6 }}>
             <button
               onClick={(e) => { e.stopPropagation(); zoomOut() }}
               style={{ background: 'rgba(0,0,0,0.55)', border: '1px solid rgba(255,255,255,0.2)', color: '#c7d2fe', borderRadius: 6, width: 28, height: 28, cursor: 'pointer', fontFamily: 'inherit', fontWeight: 700 }}
