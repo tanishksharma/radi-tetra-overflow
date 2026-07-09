@@ -8,9 +8,9 @@
       // so React Router can handle the route client-side.
       (function () {
         var l = window.location;
-        // Derive base from the first path segment so this works if the repo is renamed
-        var base = '/';
-        var path = l.pathname.slice(base.length); // e.g. "play" from "/play"
+        // GitHub Pages project path for this fork
+        var base = '/radi-tetra-overflow/';
+        var path = l.pathname.slice(base.length); // e.g. "play" from "/radi-tetra-overflow/play"
         var dest = l.protocol + '//' + l.hostname +
           (l.port ? ':' + l.port : '') +
           base + '?redirect=' + encodeURIComponent(path + l.search) + l.hash;
